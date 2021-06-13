@@ -7,6 +7,9 @@ This is project is still very basic at this point. The PDF walkthrough will curr
 # Automation
 The Bash script for setting up a static Ethernet IP address is an example of how some parts of this process can be automated. The potential for more automation will be examined once I've finished the source tutorial and updated the PDF walkthrough following that.
 
+# Hardware
+This will contain a list of the hardware used for the cluster, so that others can have concrete examples of what will work together if they don't feel like looking up specifications themselves.
+
 # Source
 Part 1: https://glmdev.medium.com/building-a-raspberry-pi-cluster-784f0df9afbd
 Part 2: https://glmdev.medium.com/building-a-raspberry-pi-cluster-aaa8d1f3d2ca
