@@ -15,4 +15,4 @@ Part 1: https://glmdev.medium.com/building-a-raspberry-pi-cluster-784f0df9afbd
 
 Part 2: https://glmdev.medium.com/building-a-raspberry-pi-cluster-aaa8d1f3d2ca
 
-Part 3: https://medium.com/@glmdev/building-a-raspberry-pi-cluster-f5f2446702e8
+Part 3: https://glmdev.medium.com/building-a-raspberry-pi-cluster-f5f2446702e8
