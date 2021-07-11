@@ -1,4 +1,4 @@
-# clusterphuq
+# raspberry_pi_cluster
 A cluster computer made up of Raspberry Pi 4s.
 
 # Current state of the project
