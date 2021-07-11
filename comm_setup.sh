@@ -13,9 +13,10 @@ node7=10.10.10.7
 
 if [ "$1" == 'master' -o "$1" == 'slave' ]
 	then
-	# Install MPI and mpi4py on all nodes
+	# Install ntpdate, MPI, and mpi4py on all nodes
 	sudo apt update
 	sudo apt upgrade
+	sudo apt -y install ntpdate
 	sudo apt -y install openmpi-bin openmpi-common libopenmpi3 libopenmpi-dev # OpenMPI
 	pip install mpi4py	# MPI library for Python 2
 	pip3 install mpi4py	# MPI library for Python 3
