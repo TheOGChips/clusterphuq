@@ -43,11 +43,13 @@ https://vilros.com/products/raspberry-pi-4-model-b-vilros-heatsink-set-of-4
 
 # Sources
 Primary
-Part 1: https://glmdev.medium.com/building-a-raspberry-pi-cluster-784f0df9afbd
 
-Part 2: https://glmdev.medium.com/building-a-raspberry-pi-cluster-aaa8d1f3d2ca
+  Part 1: https://glmdev.medium.com/building-a-raspberry-pi-cluster-784f0df9afbd
 
-Part 3: https://glmdev.medium.com/building-a-raspberry-pi-cluster-f5f2446702e8
+  Part 2: https://glmdev.medium.com/building-a-raspberry-pi-cluster-aaa8d1f3d2ca
 
-Secondary
+  Part 3: https://glmdev.medium.com/building-a-raspberry-pi-cluster-f5f2446702e8
+
+Secondary:
+
 https://magpi.raspberrypi.org/articles/build-a-raspberry-pi-cluster-computer
