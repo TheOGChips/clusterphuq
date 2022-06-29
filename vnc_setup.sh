@@ -8,17 +8,19 @@ apt upgrade
 echo -e "Installing TightVNC server...\n"
 apt install tightvncserver
 
-home=/home/pi
+user_name=pi	# change the username as appropriate
+home=/home/"$user_name"
+resolution="1600x900"
 
 echo -e "Creating alias to run TightVNC server...\n"
 touch "$home"/.bash_aliases
-echo "alias start-vnc='tightvncserver -nolisten tcp :1 -geometry 1920x1080'" >> "$home"/.bash_aliases	# this alias can be used to start VNC after remote login through SSH if all else fails
+echo "alias start-vnc='tightvncserver -nolisten tcp :1 -geometry $resolution'" >> "$home"/.bash_aliases	# this alias can be used to start VNC after remote login through SSH if all else fails
 source "$home"/.bash_aliases
 
 # the below will always start the TightVNC server on port 1 (5901), the idea being port 0 (5900) would always be used for SSH
 filepath=/etc/systemd/system/tightvncserver.service
 port_number=1	# you can change the port number to whatever desired
-user_name=pi	# change the username as appropriate
+
 
 echo -e "Creating tightvncserver.service in /etc/systemd/system/...\n"
 touch "$filepath"
@@ -32,7 +34,7 @@ echo "User=$user_name" >> "$filepath"	# TODO: Change the username here as necess
 echo "PAMName=login" >> "$filepath"
 echo "PIDFile=/home/$user_name/.vnc/%H:$port_number.pid" >> "$filepath"
 echo "ExecStartPre=-/usr/bin/tightvncserver -kill :$port_number > /dev/null 2>&1" >> "$filepath"
-echo "ExecStart=/usr/bin/tightvncserver -nolisten tcp :$port_number -geometry 1920x1080" >> "$filepath"	# the screen resolution here can be changed as necessary
+echo "ExecStart=/usr/bin/tightvncserver -nolisten tcp :$port_number -geometry $resolution" >> "$filepath"	# the screen resolution here can be changed as necessary
 echo "ExecStop=/usr/bin/tightvncserver -kill :$port_number" >> "$filepath"
 echo "WorkingDirectory=$home" >> "$filepath"
 echo >> "$filepath"
